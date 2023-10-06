@@ -1,4 +1,15 @@
-## CO<sub>2</sub> monitor based on an Arduino and a SenseAir S8 sensor
+## Updated to work on Arduino Nano 33 IoT
+
+This fork uses the built-in serial connections on the arduino instead of relying on the SoftwareSerial package, as this package does not work on the Nano 33 IoT.
+
+These are the wiring changes:
+- 5-pin side, pin 2 (UART RX) → **Arduino TX** (green)
+
+- 5-pin side, pin 3 (UART TX) → **Arduino RX** (yellow)
+
+Additionally, because the Nano 33 IoT runs on 3.3V while the S8 runs on 5V, you will need to power the Arduino using USB power. Then, to power the S8 sensor, you need to bridge the VUSB contacts on the bottom of the Arduino, then connect the sensor to the VUSB pin. Note that this pin directly uses the USB power and is not regulated to 5V, so an unstable power source might kill the sensor.
+
+## Original Docs: CO<sub>2</sub> monitor based on an Arduino and a SenseAir S8 sensor
 
 This is a low-cost, do-it-yourself CO<sub>2</sub> monitor based on the [SenseAir
 S8](https://senseair.com/products/size-counts/s8-lp/) sensor, an
