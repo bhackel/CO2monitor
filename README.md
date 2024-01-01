@@ -36,7 +36,7 @@ Procedure
 - Add Bluetooth functionality so that I can connect to it with my laptop and read the current CO2 value
 - Add Bluetooth functionality so that I can connect to it, read up to the past 100 values, then these values are cleared from a storage in memory
 - #### APP
-- Create a swift Hello World app and send it to my phone
+- ~~Create a swift Hello World app and send it to my phone~~ Done 12/31/23
 - Add Bluetooth functionality to the swift app so that it can connect to the Arduino and read the current CO2 value to the screen
 - Have it continually read the CO2 value and put it on the screen
 - Have it read the past 100 values
